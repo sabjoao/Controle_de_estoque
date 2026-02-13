@@ -1,0 +1,14 @@
+import { Router, Request, Response } from "express";
+import { CreateUserController } from "./controllers/user/CreateUserController";
+import { AuthUserController } from "./controllers/user/AuthUserController";
+
+const router = Router();
+router.get("/test", (request: Request, response: Response) => {
+    return response.json({ ok: true });
+});
+
+//User Routes
+router.post('/user', new CreateUserController().handle);  //Cria uma instancia do CreateUserController
+router.post('/session', new AuthUserController().handle);
+
+export { router };
