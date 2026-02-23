@@ -24,7 +24,5 @@ export function isAuthenticated(
         request.user_id = sub;
         return next(); //deixa que a requisicao prossiga 
     } catch (error) {
-
     }
-
 }
