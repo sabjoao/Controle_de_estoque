@@ -1,6 +1,8 @@
 import { Router, Request, Response } from "express";
 import { CreateUserController } from "./controllers/user/CreateUserController";
 import { AuthUserController } from "./controllers/user/AuthUserController";
+import { isAuthenticated } from "./middlewares/isAuthenticated";
+import { DetailUserController } from "./controllers/user/DetailUserController";
 
 const router = Router();
 router.get("/test", (request: Request, response: Response) => {
@@ -10,5 +12,7 @@ router.get("/test", (request: Request, response: Response) => {
 //User Routes
 router.post('/user', new CreateUserController().handle);  //Cria uma instancia do CreateUserController
 router.post('/session', new AuthUserController().handle);
+router.get('/me', isAuthenticated, new DetailUserController().handle);
 
 export { router };
+
