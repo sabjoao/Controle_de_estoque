@@ -61,8 +61,8 @@ model Product {
   user    User   @relation(fields: [user_id], references: [id])
   user_id String
 
-  supplier    Supplier @relation(fields: [supplier_id], references: [id])
-  supplier_id String
+  supplier    Supplier? @relation(fields: [supplier_id], references: [id])
+  supplier_id String?
 
   @@map("products")
 }
