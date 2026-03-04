@@ -13,6 +13,8 @@ import { RemoveCategoryController } from "./controllers/category/RemoveCategoryC
 import { CreateProductController } from "./controllers/Procut/CreateProductController";
 import { EditProcutController } from "./controllers/Procut/EditProductController";
 import { ListProductByCategoryController } from "./controllers/Procut/ListProductByCategoryController";
+import { RemoveProductController } from "./controllers/Procut/RemoveProductController";
+import { ListAllProductsController } from "./controllers/Procut/ListAllProductsController";
 
 const router = Router();
 const upload = multer(uploadConfig.upload("./tmp"));
@@ -37,6 +39,8 @@ router.delete("/category/remove", isAuthenticated, new RemoveCategoryController(
 router.post("/product", isAuthenticated, upload.single("file"), new CreateProductController().handle);
 router.put("/product/edit", isAuthenticated, upload.single("file"), new EditProcutController().handle);
 router.get("/product", isAuthenticated, new ListProductByCategoryController().hanlde);
+router.delete("/product/remove", isAuthenticated, new RemoveProductController().handle);
+router.get("/product/all", isAuthenticated, new ListAllProductsController().handle);
 
 export { router };
 
