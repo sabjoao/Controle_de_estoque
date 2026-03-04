@@ -15,6 +15,7 @@ import { EditProcutController } from "./controllers/Procut/EditProductController
 import { ListProductByCategoryController } from "./controllers/Procut/ListProductByCategoryController";
 import { RemoveProductController } from "./controllers/Procut/RemoveProductController";
 import { ListAllProductsController } from "./controllers/Procut/ListAllProductsController";
+import { SaleProductController } from "./controllers/Sales/SaleProductController";
 
 const router = Router();
 const upload = multer(uploadConfig.upload("./tmp"));
@@ -41,6 +42,9 @@ router.put("/product/edit", isAuthenticated, upload.single("file"), new EditProc
 router.get("/product", isAuthenticated, new ListProductByCategoryController().hanlde);
 router.delete("/product/remove", isAuthenticated, new RemoveProductController().handle);
 router.get("/product/all", isAuthenticated, new ListAllProductsController().handle);
+
+//Sales Routes
+router.put("/sale/product", isAuthenticated, new SaleProductController().handle);
 
 export { router };
 
