@@ -6,31 +6,31 @@ Este projeto foi criado durante a minha capacitação de backend na empresa jún
 
 A aplicação permite gerenciar usuários, categorias e produtos, oferecendo um sistema simples e funcional para controle de estoque.
 
-🛠️ Tecnologias Utilizadas
+# 🛠️ Tecnologias Utilizadas
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-⚡ Node.js
+### ⚡ Node.js 
 
-🧵 TypeScript
+### 🧵 TypeScript
 
-📦 Yarn
+### 📦 Yarn
 
-🗄️ Prisma ORM
+### 🗄️ Prisma ORM
 
-🌐 Express
+### 🌐 Express
 
-🔐 JWT (JSON Web Token) para autenticação
+### 🔐 JWT (JSON Web Token) para autenticação
 
-📄 Swagger / OpenAPI para documentação da API
+### 📄 Swagger / OpenAPI para documentação da API
 
-🗃️ Banco de dados relacional
+### 🗃️ Banco de dados relacional
 
-📚 Funcionalidades
+### 📚 Funcionalidades
 
-A API possui funcionalidades essenciais para um sistema de controle de estoque:
+# A API possui funcionalidades essenciais para um sistema de controle de estoque:
 
-👤 Usuários
+## 👤 Usuários
 
 Criar usuário
 
@@ -38,13 +38,13 @@ Autenticar usuário
 
 Buscar informações do usuário autenticado
 
-📂 Categorias
+## 📂 Categorias
 
 Criar categoria
 
 Listar categorias cadastradas
 
-📦 Produtos
+## 📦 Produtos
 
 Criar produto
 
@@ -56,17 +56,17 @@ Relacionar produto com usuário
 
 Controle de quantidade em estoque
 
-🔐 Autenticação
+## 🔐 Autenticação
 
 Login com geração de JWT
 
 Rotas protegidas com middleware de autenticação
 
-📑 Documentação
+## 📑 Documentação
 
 Documentação da API disponível via Swagger UI
 
-📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 src/
  ├── controllers
  ├── services
@@ -77,7 +77,7 @@ src/
 
 Arquitetura baseada em Controllers + Services, separando regras de negócio da camada de requisição.
 
-⚙️ Instalação
+# ⚙️ Instalação
 
 Clone o repositório:
 
@@ -123,16 +123,16 @@ testar endpoints
 
 enviar requisições diretamente pelo navegador
 
-🧪 Exemplos de Rotas
-Criar usuário
+# 🧪 Exemplos de Rotas
+## Criar usuário
 POST /v1/user
-Autenticar usuário
+## Autenticar usuário
 POST /v1/session
-Criar categoria
+## Criar categoria
 POST /v1/category
-Criar produto
+## Criar produto
 POST /v1/product
-🎯 Objetivo do Projeto
+# 🎯 Objetivo do Projeto
 
 Este projeto foi desenvolvido com o objetivo de:
 
@@ -146,9 +146,7 @@ implementar autenticação com JWT
 
 documentar APIs com Swagger
 
-👨‍💻 Autor
+# 👨‍💻 Autor
 
 Desenvolvido por João Pedro
 
-GitHub:
-https://github.com/sabjoao
